@@ -67,7 +67,7 @@ Gui.activeDocument().hide("SketchHole")
 
 Hole = doc.Body001.newObject("PartDesign::Hole", "Hole")
 Hole.Profile = HoleSketch
-Hole.Depth = 3
+Hole.Depth = 10
 Hole.Threaded = 0
 Hole.ThreadType = 1
 Hole.ThreadSize = 3
@@ -92,7 +92,7 @@ Gui.activeDocument().hide("SketchHole2")
 
 Hole2 = doc.Body001.newObject("PartDesign::Hole", "Hole2")
 Hole2.Profile = HoleSketch2
-Hole2.Depth = 3
+Hole2.Depth = 10
 Hole2.Threaded = 0
 Hole2.ThreadType = 1
 Hole2.ThreadSize = 3
