@@ -12,8 +12,8 @@ batteryheight = 40
 drivelength = 150
 drivewidth = 102
 driveheight = 25    # floppy drive height in mm
-wallthickness = 1.5 # wall thickness in mm
-textpercent = 80    # percentage of wall, which will be cut into for text
+wallthickness = 3.0 # wall thickness in mm
+textpercent = 30    # percentage of wall, which will be cut into for text
 
 A7 = 41.28
 A6 = 44.45 
@@ -43,7 +43,7 @@ SocketSketch.Support = (myPart,["Face9"])
 SocketSketch.MapMode = 'FlatFace'
 doc.recompute()
 
-SocketSketch.addGeometry(Part.Circle(App.Vector(drivelength + (batteryheight/2.0),15,0), App.Vector(0,0,1), 7),False)
+SocketSketch.addGeometry(Part.Circle(App.Vector(drivelength + (batteryheight/2.0),driveheight/2,0), App.Vector(0,0,1), 7),False)
 
 pocket = doc.Body001.newObject("PartDesign::Pocket","Pocket")
 pocket.Profile = App.activeDocument().SketchHoleSocket
@@ -51,23 +51,7 @@ pocket.Length = 5.0
 
 Gui.activeDocument().hide("SketchHoleSocket")
 
-"""
-SHole = doc.Body001.newObject("PartDesign::Hole", "SHole")
-SHole.Profile = SocketSketch
-SHole.Depth = 3
-SHole.Threaded = 0
-SHole.ThreadType = 1
-SHole.ThreadSize = 7
-SHole.DrillPointAngle = 118.000000
-
-Gui.activeDocument().hide("myPartName")
-Gui.activeDocument().setEdit('SHole', 0)
-
-"""
-
 doc.recompute()
-
-
 
 HoleSketch = doc.Body001.newObject('Sketcher::SketchObject','SketchHole') 
 HoleSketch.Support = (myPart,["Face9"])
@@ -75,9 +59,9 @@ HoleSketch.MapMode = 'FlatFace'
 
 doc.recompute()
 
-HoleSketch.addGeometry(Part.Circle(App.Vector(drivelength - A7,15,0), App.Vector(0,0,1), 3),False)
-HoleSketch.addGeometry(Part.Circle(App.Vector(drivelength - A7 - A6,15,0), App.Vector(0,0,1), 3),False)
-HoleSketch.addGeometry(Part.Circle(App.Vector(drivelength - A7 - A13,15,0), App.Vector(0,0,1), 3),False)
+HoleSketch.addGeometry(Part.Circle(App.Vector(drivelength - A7,driveheight/2,0), App.Vector(0,0,1), 3),False)
+HoleSketch.addGeometry(Part.Circle(App.Vector(drivelength - A7 - A6,driveheight/2,0), App.Vector(0,0,1), 3),False)
+HoleSketch.addGeometry(Part.Circle(App.Vector(drivelength - A7 - A13,driveheight/2,0), App.Vector(0,0,1), 3),False)
 
 Gui.activeDocument().hide("SketchHole")
 
@@ -100,9 +84,9 @@ HoleSketch2.MapMode = 'FlatFace'
 
 doc.recompute()
 
-HoleSketch2.addGeometry(Part.Circle(App.Vector(-drivelength + A7,15,0), App.Vector(0,0,1), 3),False)
-HoleSketch2.addGeometry(Part.Circle(App.Vector(-drivelength + A7 + A6,15,0), App.Vector(0,0,1), 3),False)
-HoleSketch2.addGeometry(Part.Circle(App.Vector(-drivelength + A7 + A13,15,0), App.Vector(0,0,1), 3),False)
+HoleSketch2.addGeometry(Part.Circle(App.Vector(-drivelength + A7,driveheight/2,0), App.Vector(0,0,1), 3),False)
+HoleSketch2.addGeometry(Part.Circle(App.Vector(-drivelength + A7 + A6,driveheight/2,0), App.Vector(0,0,1), 3),False)
+HoleSketch2.addGeometry(Part.Circle(App.Vector(-drivelength + A7 + A13,driveheight/2,0), App.Vector(0,0,1), 3),False)
 
 Gui.activeDocument().hide("SketchHole2")
 
