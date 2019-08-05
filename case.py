@@ -8,7 +8,7 @@ myPart = doc.addObject("Part::Feature","myPartName")
 
 #incut = 4	    # padding which will be used to add buttons etc.
 
-batteryheight = 40
+batteryheight = 30
 
 drivelength = 145
 drivewidth = 102
@@ -106,7 +106,7 @@ SocketSketch.Support = (myPart,["Face9"])
 SocketSketch.MapMode = 'FlatFace'
 doc.recompute()
 
-SocketSketch.addGeometry(Part.Circle(App.Vector(drivelength + (batteryheight/2.0),driveheight/2,0), App.Vector(0,0,1), 7),False)
+SocketSketch.addGeometry(Part.Circle(App.Vector(drivelength + (batteryheight/2.0),driveheight/2,0), App.Vector(0,0,1), 7/2),False)
 
 pocket = doc.Body001.newObject("PartDesign::Pocket","Pocket")
 pocket.Profile = App.activeDocument().SketchHoleSocket
