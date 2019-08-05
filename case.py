@@ -6,7 +6,7 @@ import ProfileLib.RegularPolygon
 doc = FreeCAD.newDocument()
 myPart = doc.addObject("Part::Feature","myPartName")
 
-batteryheight = 30
+batteryheight = 40
 drivelength = 145
 drivewidth = 102
 driveheight = 26  # floppy drive height in mm
