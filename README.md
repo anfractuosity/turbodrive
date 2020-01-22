@@ -10,5 +10,5 @@ Preferences > Part Design > Max deviation to: 0.0100mm
 
 # 3D print
 
-![CAD](/images/print.png)
+![3D print](/images/print.jpg)
 
