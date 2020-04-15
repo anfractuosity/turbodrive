@@ -19,3 +19,12 @@ can be simply fixed in my Python code).
 
 ![3D print](/images/print.jpg)
 
+# Electronics
+
+* Raspberry Pi Zero
+* USB floppy adapter
+* USB panel mount - https://thepihut.com/products/adafruit-panel-mount-extension-usb-cable-micro-b-male-to-micro-b-female
+* 3.5mm panel mount socket - https://uk.farnell.com/lumberg/1502-02/socket-3-5mm-jack-4way/dp/1368639
+* 18650 to USB board, for powering the pi and the floppy drive ( see review - https://www.youtube.com/watch?v=joAkJ9QA2bw ) 
+* I2S module for providing audio output ( https://learn.adafruit.com/adafruit-i2s-stereo-decoder-uda1334a )
+
